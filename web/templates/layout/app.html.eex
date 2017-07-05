@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>React Wings Boilerplate</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+
+	<style>
+		:focus { outline: none; }
+		body {
+			font-family: "Avenir Next",Nunito,"Helvetica Neue",Helvetica,sans-serif;
+			font-size: 14px;
+			color: #222222;
+			font-weight: 400;
+			overflow: hidden;
+		}
+
+		#root {
+			position: absolute;
+			top: 0; right: 0; bottom: 0; left: 0;
+			display: flex;
+
+		}
+		.touchable {
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="root"></div>
+
+	<%= if Mix.env == :dev do %>
+		<script src='http://localhost:3000/vendor.bundle.js'></script>
+		<script src='http://localhost:3000/app.bundle.js'></script>
+	<% else %>
+		<script src="<%= static_path(@conn, "/app.bundle.js") %>"></script>
+	<% end %>
+
+</body>
+</html>

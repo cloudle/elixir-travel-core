@@ -1,0 +1,1 @@
+{"accountByUsername":"MATCH (account:Account{username: $username}) RETURN account LIMIT 1","allAccount":"MATCH (account:Account) RETURN account","someQuery":"MATCH (account:Account) RETURN account LIMIT 1"}

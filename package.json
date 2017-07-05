@@ -1,0 +1,54 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node webpack.devserver",
+    "build": "MIX_ENV=prod mix release --no-tar --env=prod",
+    "upstart": "npm run build && npm run prod:restart",
+    "test": "jest",
+    "vendor": "webpack --config webpack.vendor.config.js",
+    "build:client": "cross-env ENV=prod webpack --config webpack.config.js",
+    "prod:console": "PORT=8888 _build/prod/rel/ace/bin/ace console",
+    "prod:start": "PORT=8888 _build/prod/rel/ace/bin/ace start",
+    "prod:restart": "PORT=8888 _build/prod/rel/ace/bin/ace restart"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.22.0",
+    "graphiql": "^0.9.3",
+    "graphql": "^0.9.1",
+    "react": "^15.4.2",
+    "react-native": "0.41.1",
+    "react-native-drawer": "^2.3.0",
+    "react-native-vector-icons": "github:cloudle/react-native-vector-icons",
+    "react-native-web": "0.0.70",
+    "react-redux": "^5.0.2",
+    "react-universal-ui": "0.0.51",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "babel-jest": "18.0.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-module-resolver": "^2.5.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-function-bind": "^6.22.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.2.12",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-es2015-loose": "^8.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "css-loader": "^0.26.2",
+    "decypher": "^0.11.0",
+    "file-loader": "^0.10.0",
+    "jest": "18.1.0",
+    "json-loader": "^0.5.4",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "react-test-renderer": "~15.4.0-rc.4",
+    "redux-logger": "^2.8.1",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
