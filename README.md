@@ -16,10 +16,6 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
 
-# Deployment
-188.166.227.144 | 6352146f-5608-568a-9acd-82066eef6715
-PORT=8888 _build/prod/rel/ace/bin/ace
-
 # Neo4j
 1. Install Neo4j 3.1.1 (it's better to install 3.1.1 but - in my case 3.1.4 just work fine..)
 2. Install Spatial plugin for 3.1.1: https://github.com/neo4j-contrib/m2/blob/master/releases/org/neo4j/neo4j-spatial/0.24-neo4j-3.1.1/neo4j-spatial-0.24-neo4j-3.1.1-server-plugin.jar.
